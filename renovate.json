@@ -5,9 +5,12 @@
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^Dockerfile$"],
+      "customType": "regex",
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
       "matchStrings": [
         "\\s+(?<package>.*?)=(?<currentValue>.*?)\\s"
       ],
@@ -17,9 +20,13 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["repology"],
-      "matchPackagePatterns": ["^alpine_"],
-      "versioning": "loose"
+      "matchDatasources": [
+        "repology"
+      ],
+      "versioning": "loose",
+      "matchPackageNames": [
+        "/^alpine_/"
+      ]
     }
   ]
 }
