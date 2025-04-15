@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "\\s+(?<package>.*?)=(?<currentValue>.*?)\\s"
+      ],
+      "datasourceTemplate": "repology",
+      "depNameTemplate": "alpine_3_21/{{{package}}}"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["repology"],
+      "matchPackagePatterns": ["^alpine_"],
+      "versioning": "loose"
+    }
+  ]
+}
