@@ -12,21 +12,9 @@
         "/^Dockerfile$/"
       ],
       "matchStrings": [
-        "\\s+(?<package>.*?)=(?<currentValue>.*?)\\s"
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
-      "datasourceTemplate": "repology",
-      "depNameTemplate": "alpine_3_21/{{{package}}}"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchDatasources": [
-        "repology"
-      ],
-      "versioning": "loose",
-      "matchPackageNames": [
-        "/^alpine_/"
-      ]
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
