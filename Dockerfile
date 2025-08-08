@@ -7,7 +7,7 @@ ENV CURL_VERSION="8.14.1-r1"
 # renovate: datasource=repology depName=alpine_3_22/jq versioning=loose
 ENV JQ_VERSION="1.8.0-r0"
 # renovate: datasource=repology depName=alpine_3_22/kubectl versioning=loose
-ENV KUBECTL_VERSION="1.33.1-r0"
+ENV KUBECTL_VERSION="1.33.1-r1"
 # renovate: datasource=repology depName=alpine_3_22/openssl versioning=loose
 ENV OPENSSL_VERSION="3.5.1-r0"
 
