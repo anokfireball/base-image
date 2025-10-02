@@ -3,7 +3,7 @@ FROM alpine:3.22.1@sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8
 # renovate: datasource=repology depName=alpine_3_22/bash versioning=loose
 ENV BASH_VERSION="5.2.37-r0"
 # renovate: datasource=repology depName=alpine_3_22/curl versioning=loose
-ENV CURL_VERSION="8.14.1-r1"
+ENV CURL_VERSION="8.14.1-r2"
 # renovate: datasource=repology depName=alpine_3_22/jq versioning=loose
 ENV JQ_VERSION="1.8.0-r0"
 # renovate: datasource=repology depName=alpine_3_22/kubectl versioning=loose
