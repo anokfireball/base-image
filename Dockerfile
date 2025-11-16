@@ -5,7 +5,7 @@ ENV BASH_VERSION="5.2.37-r0"
 # renovate: datasource=repology depName=alpine_3_22/curl versioning=loose
 ENV CURL_VERSION="8.14.1-r2"
 # renovate: datasource=repology depName=alpine_3_22/jq versioning=loose
-ENV JQ_VERSION="1.8.0-r0"
+ENV JQ_VERSION="1.8.1-r0"
 # renovate: datasource=repology depName=alpine_3_22/kubectl versioning=loose
 ENV KUBECTL_VERSION="1.33.1-r3"
 # renovate: datasource=repology depName=alpine_3_22/openssl versioning=loose
