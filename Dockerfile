@@ -9,7 +9,7 @@ ENV JQ_VERSION="1.8.1-r0"
 # renovate: datasource=repology depName=alpine_3_23/kubectl versioning=loose
 ENV KUBECTL_VERSION="1.34.2-r2"
 # renovate: datasource=repology depName=alpine_3_23/openssl versioning=loose
-ENV OPENSSL_VERSION="3.5.4-r0"
+ENV OPENSSL_VERSION="3.5.5-r0"
 
 RUN apk update \
     && apk upgrade \
