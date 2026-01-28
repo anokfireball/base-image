@@ -12,13 +12,14 @@ ENV KUBECTL_VERSION="1.33.1-r5"
 ENV OPENSSL_VERSION="3.5.4-r0"
 
 RUN apk update \
-     && apk upgrade \
-     && apk add \
+    && apk upgrade \
+    && apk add \
         bash="${BASH_VERSION}" \
         curl="${CURL_VERSION}" \
         jq="${JQ_VERSION}" \
         kubectl="${KUBECTL_VERSION}" \
         openssl="${OPENSSL_VERSION}" \
-     && rm -rf /var/cache/apk/*
+    && apk del apk-tools \
+    && rm -rf /etc/apk /lib/apk /usr/share/apk /var/cache/apk/* /tmp/* /var/tmp/* /root/.cache
 
 CMD ["/bin/sh"]
