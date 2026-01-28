@@ -1,7 +1,7 @@
 FROM alpine:3.23.3@sha256:25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659
 
 # renovate: datasource=repology depName=alpine_3_23/bash versioning=loose
-ENV BASH_VERSION="5.2.37-r0"
+ENV BASH_VERSION="5.3.3-r1"
 # renovate: datasource=repology depName=alpine_3_23/curl versioning=loose
 ENV CURL_VERSION="8.14.1-r2"
 # renovate: datasource=repology depName=alpine_3_23/jq versioning=loose
