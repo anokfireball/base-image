@@ -5,6 +5,17 @@
   ],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "packageRules": [
+    {
+      "description": "docker-alpine has no tags/releases, so Renovate cannot fetch notes; link the Alpine announcements and the aports release diff instead",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["alpine"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "prBodyNotes": [
+        "### Alpine release links\n\n- [Alpine announcements](https://alpinelinux.org/posts/)\n- [aports diff `v{{{currentVersion}}}...v{{{newVersion}}}`](https://gitlab.alpinelinux.org/alpine/aports/-/compare/v{{{currentVersion}}}...v{{{newVersion}}})\n- [docker-alpine `v{{{newMajor}}}.{{{newMinor}}}` branch commits](https://github.com/alpinelinux/docker-alpine/commits/v{{{newMajor}}}.{{{newMinor}}})"
+      ]
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",
